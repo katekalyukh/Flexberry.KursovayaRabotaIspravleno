@@ -1,0 +1,113 @@
+<h3 class="ui header">{{t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерЗаказа
+      class=(if (v-get validationModel "номерЗаказа" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.номерЗаказа-caption")
+      data-test-i-i-s-kursovaya-rabota-ispravleno-заказ-e-номерЗаказа=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерЗаказа" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.фотокиоск-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.фотокиоск
+      relationName="фотокиоск"
+      projection="ФотокиоскL"
+      title=(t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.фотокиоск-caption")
+      readonly=readonly
+      componentName="фотокиоскLookup"
+      class=(if (v-get validationModel "фотокиоск" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-ispravleno-заказ-e-фотокиоск=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фотокиоск" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.фотокиоск.наименование
+      class=(if (v-get validationModel.фотокиоск "наименование" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.фотокиоск.наименование-caption")
+      data-test-i-i-s-kursovaya-rabota-ispravleno-заказ-e-фотокиоск-наименование=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.фотокиоск "наименование" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.клиент-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.клиент
+      relationName="клиент"
+      projection="КлиентL"
+      title=(t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.клиент-caption")
+      readonly=readonly
+      componentName="клиентLookup"
+      class=(if (v-get validationModel "клиент" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-ispravleno-заказ-e-клиент=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "клиент" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.клиент.iD
+      class=(if (v-get validationModel.клиент "iD" "isInvalid") "error")
+      label=(t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.клиент.iD-caption")
+      data-test-i-i-s-kursovaya-rabota-ispravleno-заказ-e-клиент-iD=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.клиент "iD" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-kursovaya-rabota-ispravleno-заказ-e-носитель="true">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.носитель-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-kursovaya-rabota-ispravleno-вид-носителя")
+      value=model.носитель
+      class=(if (v-get validationModel "носитель" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "носитель" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-kursovaya-rabota-ispravleno-заказ-e.фото-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="фотоGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.фото
+      content=model.фото
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "фото" "isInvalid") "error")
+      data-test-i-i-s-kursovaya-rabota-ispravleno-заказ-e-фото=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фото" "message")}}
+  </div>
+</form>

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-rabota-ispravleno-фотокиоск-e",
+  "editForm": "i-i-s-kursovaya-rabota-ispravleno-фотокиоск-e",
+  "external": false,
+  "caption": "Фотокиоск",
+  "name": "IISKursovayaRabotaIspravlenoФотокиоскL",
+  "className": "ФотокиоскL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-ispravleno-фотокиоск",
+      "modelProjection": "ФотокиоскL"
+    }
+  ]
+}

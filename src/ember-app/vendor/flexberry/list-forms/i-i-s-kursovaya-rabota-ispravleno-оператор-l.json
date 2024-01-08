@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovaya-rabota-ispravleno-оператор-e",
+  "editForm": "i-i-s-kursovaya-rabota-ispravleno-оператор-e",
+  "external": false,
+  "caption": "Оператор",
+  "name": "IISKursovayaRabotaIspravlenoОператорL",
+  "className": "ОператорL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-ispravleno-оператор",
+      "modelProjection": "ОператорL"
+    }
+  ]
+}

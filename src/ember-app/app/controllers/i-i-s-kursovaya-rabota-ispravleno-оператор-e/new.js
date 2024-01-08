@@ -1,0 +1,4 @@
+import IISKursovayaRabotaIspravlenoОператорEController from '../i-i-s-kursovaya-rabota-ispravleno-оператор-e';
+
+var IISKursovayaRabotaIspravlenoОператорENewController = IISKursovayaRabotaIspravlenoОператорEController;
+export default IISKursovayaRabotaIspravlenoОператорENewController;

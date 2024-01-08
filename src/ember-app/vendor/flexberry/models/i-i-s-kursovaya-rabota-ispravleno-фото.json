@@ -1,0 +1,104 @@
+﻿{
+  "name": "IISKursovayaRabotaIspravlenoФото",
+  "modelName": "i-i-s-kursovaya-rabota-ispravleno-фото",
+  "className": "Фото",
+  "nameSpace": "IIS.KursovayaRabotaIspravleno",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "вид",
+      "type": "i-i-s-kursovaya-rabota-ispravleno-выбор-вида",
+      "flexberryType": "ВыборВида",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "стоимость",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-заказ",
+      "inverse": "фото"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ФотоE",
+      "modelName": "i-i-s-kursovaya-rabota-ispravleno-фото",
+      "attrs": [
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "вид",
+          "caption": "Вид",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "стоимость",
+          "caption": "Стоимость",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ФотоL",
+      "modelName": "i-i-s-kursovaya-rabota-ispravleno-фото",
+      "attrs": [
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "вид",
+          "caption": "Вид фото",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "стоимость",
+          "caption": "Стоимость",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,198 @@
+﻿{
+  "name": "IISKursovayaRabotaIspravlenoЗаказ",
+  "modelName": "i-i-s-kursovaya-rabota-ispravleno-заказ",
+  "className": "Заказ",
+  "nameSpace": "IIS.KursovayaRabotaIspravleno",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номерЗаказа",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "носитель",
+      "type": "i-i-s-kursovaya-rabota-ispravleno-вид-носителя",
+      "flexberryType": "ВидНосителя",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "клиент",
+      "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-клиент",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "фотокиоск",
+      "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-фотокиоск",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "фото",
+      "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-фото",
+      "inverse": "заказ"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказE",
+      "modelName": "i-i-s-kursovaya-rabota-ispravleno-заказ",
+      "attrs": [
+        {
+          "name": "номерЗаказа",
+          "caption": "Номер заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "носитель",
+          "caption": "Носитель",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Фотокиоск",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "default",
+          "caption": "Фотокиоск",
+          "name": "фотокиоск",
+          "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-фотокиоск",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "iD",
+              "caption": "Клиент",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "default",
+          "caption": "Клиент",
+          "name": "клиент",
+          "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-клиент",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ФотоL",
+          "caption": "Фото",
+          "name": "фото",
+          "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-фото",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказL",
+      "modelName": "i-i-s-kursovaya-rabota-ispravleno-заказ",
+      "attrs": [
+        {
+          "name": "номерЗаказа",
+          "caption": "Номер заказа",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "носитель",
+          "caption": "Носитель",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Фотокиоск",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Фотокиоск",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фотокиоск",
+          "name": "фотокиоск",
+          "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-фотокиоск",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Клиент",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "iD",
+              "caption": "Клиент",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Клиент",
+          "name": "клиент",
+          "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-клиент",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ФотоL",
+          "caption": "",
+          "name": "фото",
+          "relatedTo": "i-i-s-kursovaya-rabota-ispravleno-фото",
+          "inverse": null
+        }
+      ]
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

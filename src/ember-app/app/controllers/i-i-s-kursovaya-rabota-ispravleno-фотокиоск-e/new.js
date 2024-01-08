@@ -1,0 +1,4 @@
+import IISKursovayaRabotaIspravlenoФотокиоскEController from '../i-i-s-kursovaya-rabota-ispravleno-фотокиоск-e';
+
+var IISKursovayaRabotaIspravlenoФотокиоскENewController = IISKursovayaRabotaIspravlenoФотокиоскEController;
+export default IISKursovayaRabotaIspravlenoФотокиоскENewController;

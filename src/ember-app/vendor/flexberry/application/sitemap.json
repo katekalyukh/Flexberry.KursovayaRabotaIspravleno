@@ -1,0 +1,57 @@
+﻿{
+  "applicationCaption": "Kursovaya rabota ispravleno",
+  "applicationTitle": "Kursovaya rabota ispravleno",
+  "items": [
+    {
+      "link": null,
+      "menuName": "kursovaya-rabota-ispravleno",
+      "caption": "KursovayaRabotaIspravleno",
+      "title": "KursovayaRabotaIspravleno",
+      "children": [
+        {
+          "link": "i-i-s-kursovaya-rabota-ispravleno-чек-l",
+          "menuName": null,
+          "caption": "Чек",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-rabota-ispravleno-клиент-l",
+          "menuName": null,
+          "caption": "Клиент",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-rabota-ispravleno-проверка-киоска-l",
+          "menuName": null,
+          "caption": "Проверка киоска",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-rabota-ispravleno-заказ-l",
+          "menuName": null,
+          "caption": "Заказ",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-rabota-ispravleno-оператор-l",
+          "menuName": null,
+          "caption": "Оператор",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-kursovaya-rabota-ispravleno-фотокиоск-l",
+          "menuName": null,
+          "caption": "Фотокиоск",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

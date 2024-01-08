@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Фотокиоск",
+      "projection": "ФотокиоскL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Оператор",
+      "projection": "ОператорL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Проверка киоска",
+  "name": "IISKursovayaRabotaIspravlenoПроверкаКиоскаE",
+  "className": "ПроверкаКиоскаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovaya-rabota-ispravleno-проверка-киоска",
+      "modelProjection": "ПроверкаКиоскаE"
+    }
+  ]
+}
